@@ -11,6 +11,6 @@ test:
     - mvn clean package
   post:
     - pwd
-    - ls -al circle_ci_aws_deployment
-    - ls -al circle_ci_aws_deployment/target
-    - cp circle_ci_aws_deployment/target/circle_ci_aws_deployment-1.0-SNAPSHOT.jar $CIRCLE_ARTIFACTS
+    - ls -al .
+    - ls -al ./target
+    - cp target/circle_ci_aws_deployment-1.0-SNAPSHOT.jar $CIRCLE_ARTIFACTS
