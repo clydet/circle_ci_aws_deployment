@@ -10,4 +10,4 @@ test:
   override:
     - mvn clean package
   post:
-    - cp circle_ci_aws_deployment/target/circle_ci_aws_deployment-*.jar $CIRCLE_ARTIFACTS
+    - cp circle_ci_aws_deployment/target/circle_ci_aws_deployment-1.0-SNAPSHOT.jar $CIRCLE_ARTIFACTS
