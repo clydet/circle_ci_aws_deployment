@@ -1,0 +1,13 @@
+machine:
+  java:
+    version: openjdk8
+
+dependencies:
+  override:
+    - cd circle_ci_aws_deployment; mvn dependency:resolve
+
+test:
+  override:
+    - mvn clean package
+  post:
+    - cp circle_ci_aws_deployment/target/circle_ci_aws_deployment-*.jar $CIRCLE_ARTIFACTS
